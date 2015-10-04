@@ -1,3 +1,22 @@
+== Running the Program ==
+
+Once you clone the repo, run bundle install.
+
+To see the help screen run:
+bundle exec bin/ball-clock
+
+To see the specific flags for the start command run:
+bundle exec bin/ball-clock help start
+
+To run the clock run:
+bundle exec bin/ball-clock start
+
+COMMAND OPTIONS
+    -b, --balls=BALLS     - Number of Balls (must be between 27 and 127) (default: 30)
+    -m, --minutes=MINUTES - Number of Minutes (default: none)
+
+== Requirements ==
+
 Movement has long been used to measure time. For example, the ball clock is a simple device which keeps track of the passing minutes by moving ball-bearings.
 Each minute, a rotating arm removes a ball bearing from the queue at the bottom, raises it to the top of the clock and deposits it on a track leading to indicators displaying minutes,
 five-minutes and hours. These indicators display the time between 1:00 and 12:59, but without 'a.m.' or 'p.m.' indicators.
