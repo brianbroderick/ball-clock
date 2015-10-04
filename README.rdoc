@@ -34,7 +34,7 @@ However, all is not lost! As the balls migrate through the mechanism of the cloc
 since the clock had some specific ordering. The length of time which can be measured is limited because the orderings of the balls eventually begin to repeat.
 Your program must compute the time before repetition, which varies according to the total number of balls present.
 
-- Operation of the Ball Clock -
+=== Operation of the Ball Clock
 
 Every minute, the least recently used ball is removed from the queue of balls at the bottom of the clock, elevated,
 then deposited on the minute indicator track, which is able to hold four balls. When a fifth ball rolls on to the minute indicator track,
@@ -49,13 +49,13 @@ The twelfth ball carried over from the five-minute indicator causes the hour ind
 returning the eleven free balls to the queue, in reverse order,
 before the twelfth ball itself also returns to the queue.
 
-- Guidelines -
+=== Guidelines
 
 The exercise may be completed in Ruby, or JavaScript. Youâ€™re welcome to do it in more than one of the languages.
 
 No permutation or LCM algorithms are allowed.  A full simulation is required. Please ensure that your code moves each ball.
 
-- Implementation -
+=== Implementation
 
 Valid numbers are in the range 27 to 127.
 
