@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>README - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Gemfile.html">Gemfile</a>
+  
+    <li><a href="./Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="./README_rdoc.html">README</a>
+  
+    <li><a href="./Rakefile.html">Rakefile</a>
+  
+    <li><a href="./ball-clock_gemspec.html">ball-clock.gemspec</a>
+  
+    <li><a href="./ball-clock_rdoc.html">ball-clock</a>
+  
+    <li><a href="./features/ball-clock_feature.html">ball-clock.feature</a>
+  
+    <li><a href="./features/clock_feature.html">clock.feature</a>
+  
+    <li><a href="./results_html.html">results.html</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page README.rdoc">
+
+<p>Movement has long been used to measure time. For example, the ball clock is
+a simple device which keeps track of the passing minutes by moving
+ball-bearings. Each minute, a rotating arm removes a ball bearing from the
+queue at the bottom, raises it to the top of the clock and deposits it on a
+track leading to indicators displaying minutes, five-minutes and hours.
+These indicators display the time between 1:00 and 12:59, but without
+&#39;a.m.&#39; or &#39;p.m.&#39; indicators. Thus 2 balls in the minute
+indicator, 6 balls in the five-minute indicator and 5 balls in the hour
+indicator displays the time 5:32.</p>
+
+<p>Unfortunately, most commercially available ball clocks do not incorporate a
+date indication, although this would be simple to do with the addition of
+further carry and indicator tracks. However, all is not lost! As the balls
+migrate through the mechanism of the clock, the order they are found in can
+be used to determine the time elapsed since the clock had some specific
+ordering. The length of time which can be measured is limited because the
+orderings of the balls eventually begin to repeat. Your program must
+compute the time before repetition, which varies according to the total
+number of balls present.</p>
+<ul><li>
+<p>Operation of the Ball <a href="Clock.html">Clock</a> -</p>
+</li></ul>
+
+<p>Every minute, the least recently used ball is removed from the queue of
+balls at the bottom of the clock, elevated, then deposited on the minute
+indicator track, which is able to hold four balls. When a fifth ball rolls
+on to the minute indicator track, its weight causes the track to tilt. The
+four balls already on the track run back down to join the queue of balls
+waiting at the bottom in reverse order of their original addition to the
+minutes track. The fifth ball, which caused the tilt, rolls on down to the
+five-minute indicator track. This track holds eleven balls. The twelfth
+ball carried over from the minutes causes the five-minute track to tilt,
+returning the eleven balls to the queue, again in reverse order of their
+addition. The twelfth ball rolls down to the hour indicator.</p>
+
+<p>The hour indicator also holds eleven balls, but has one extra fixed ball
+which is always present so that counting the balls in the hour indicator
+will yield an hour in the range one to twelve. The twelfth ball carried
+over from the five-minute indicator causes the hour indicator to tilt,
+returning the eleven free balls to the queue, in reverse order, before the
+twelfth ball itself also returns to the queue.</p>
+<ul><li>
+<p>Guidelines -</p>
+</li></ul>
+
+<p>The exercise may be completed in Ruby, or JavaScript. Youâ€™re welcome to
+do it in more than one of the languages.</p>
+
+<p>No permutation or LCM algorithms are allowed.  A full simulation is
+required. Please ensure that your code moves each ball.</p>
+<ul><li>
+<p>Implementation -</p>
+</li></ul>
+
+<p>Valid numbers are in the range 27 to 127.</p>
+
+<p>Clocks must support two modes of computation.</p>
+
+<p>The first mode takes a single parameter specifying the number of balls and
+reports the number of balls given in the input and the number of days
+(24-hour periods) which elapse before the clock returns to its initial
+ordering.</p>
+
+<pre>Sample Input
+30
+45
+
+Output for the Sample Input
+30 balls cycle after 15 days.
+45 balls cycle after 378 days.</pre>
+
+<p>The second mode takes two parameters, the number of balls and the number of
+minutes to run for.  If the number of minutes is specified, the clock must
+run to the number of minutes and report the state of the tracks at that
+point in a JSON format.</p>
+
+<pre>Sample Input
+30 325
+
+Output for the Sample Input
+{&quot;Min&quot;:[],&quot;FiveMin&quot;:[22,13,25,3,7],&quot;Hour&quot;:[6,12,17,4,15],&quot;Main&quot;
+[11,5,26,18,2,30,19,8,24,10,29,20,16,21,28,1,23,14,27,9]}</pre>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

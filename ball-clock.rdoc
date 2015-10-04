@@ -1,0 +1,5 @@
+= ball-clock
+
+Generate this with
+    ball-clock rdoc
+After you have described your command line interface

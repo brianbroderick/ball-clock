@@ -1,0 +1,69 @@
+#!/usr/bin/env ruby
+
+### lib/ball-clock.rb has the requires for everything else needed
+require 'ball-clock'
+
+begin # TODO: Remove this begin/rescue before distributing the app as a gem
+rescue LoadError
+  STDERR.puts "In development, use `bundle exec bin/ball-clock` to run your app"
+  STDERR.puts "At install-time, RubyGems will make sure lib, etc. are in the load path"
+  exit 64
+end
+
+### Moved GLI to a Wrapper module so it doesn't pollute the public namespace, which can mess with Pry and other stuff.
+module Wrapper
+  include GLI::App
+  extend self
+
+  program_desc 'A simple ball clock coding exercise.'
+
+  version BallClock::VERSION
+
+  subcommand_option_handling :normal
+  arguments :strict
+
+  desc 'Start the clock ticking'
+  command :start do |c|
+    c.desc 'Number of Balls (must be between 27 and 127)'
+    c.arg_name 'BALLS'
+    ### The requirements don't mention a default value. It's here to be easier during development
+    c.default_value '30'
+    c.flag [:b,:balls]
+
+    c.desc 'Number of Minutes'
+    c.arg_name 'MINUTES'
+    c.flag [:m,:minutes]
+
+    ### Here's where meat of the app begins
+    c.action do |global_options,options,args|
+      raise 'The number of balls must be between 27 and 127.' if options[:b].to_i > 127 or options[:b].to_i < 27
+      raise 'The number of balls must be set to run the clock.' if options[:m] and options[:b].nil?
+
+      Clock.process(options)
+    end
+  end
+
+  ### This is stubbed in from GLI and not needed for this app, but I left it in just in case.
+  pre do |global,command,options,args|
+    # Pre logic here
+    # Return true to proceed; false to abort and not call the
+    # chosen command
+    # Use skips_pre before a command to skip this block
+    # on that command only
+    true
+  end
+
+  post do |global,command,options,args|
+    # Post logic here
+    # Use skips_post before a command to skip this
+    # block on that command only
+  end
+
+  on_error do |exception|
+    # Error logic here
+    # return false to skip default error handling
+    true
+  end
+
+  exit run(ARGV)
+end

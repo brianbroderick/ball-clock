@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Clock - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-c-process">::process</a>
+    
+    <li ><a href="#method-i-add_five_minute">#add_five_minute</a>
+    
+    <li ><a href="#method-i-add_hour">#add_hour</a>
+    
+    <li ><a href="#method-i-add_minute">#add_minute</a>
+    
+    <li ><a href="#method-i-add_twelfth_hour">#add_twelfth_hour</a>
+    
+    <li ><a href="#method-i-check_for_duplication">#check_for_duplication</a>
+    
+    <li ><a href="#method-i-flush_track">#flush_track</a>
+    
+    <li ><a href="#method-i-json_output">#json_output</a>
+    
+    <li ><a href="#method-i-output">#output</a>
+    
+    <li ><a href="#method-i-pretty_output">#pretty_output</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Clock">
+  <h1 id="class-Clock" class="class">
+    class Clock
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-achieved_duplication" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">achieved_duplication</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-balls" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">balls</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-checks" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">checks</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-default_tray" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">default_tray</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-five_min" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">five_min</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-hour" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">hour</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-main_tray" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">main_tray</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-min" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">min</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-minutes" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">minutes</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-twelfth_hour" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">twelfth_hour</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(options)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/clock.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">options</span>)
+  <span class="ruby-comment">### Set up the initial variables</span>
+  <span class="ruby-ivar">@balls</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:b</span>]
+  <span class="ruby-ivar">@minutes</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:m</span>]
+  <span class="ruby-ivar">@min</span> = []; <span class="ruby-ivar">@five_min</span> = []; <span class="ruby-ivar">@hour</span> = []; <span class="ruby-ivar">@main_tray</span> = []; <span class="ruby-ivar">@checks</span> = <span class="ruby-value">0</span>; <span class="ruby-ivar">@achieved_duplication</span> = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-comment">### Create the initial main tray numbered N..1 Balls.</span>
+  <span class="ruby-comment">### Why N..1?  It simulates putting #1 first, then #2.</span>
+  <span class="ruby-comment">### The least recently used ball would then be #1.</span>
+  <span class="ruby-identifier">options</span>[<span class="ruby-value">:b</span>].<span class="ruby-identifier">to_i</span>.<span class="ruby-identifier">downto</span>(<span class="ruby-value">1</span>).<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@main_tray</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">b</span> }
+
+  <span class="ruby-comment">### Create a default array to compare against to determine if the pattern repeats</span>
+  <span class="ruby-ivar">@default_tray</span> = <span class="ruby-ivar">@main_tray</span>.<span class="ruby-identifier">dup</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-process" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">process</span><span
+            class="method-args">(options)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="process-source">
+            <pre><span class="ruby-comment"># File lib/clock.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">process</span>(<span class="ruby-identifier">options</span>)
+  <span class="ruby-identifier">c</span> = <span class="ruby-constant">Clock</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">minutes</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-value">1</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">minutes</span>.<span class="ruby-identifier">to_i</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">add_minute</span> }
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">json_output</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">c</span>.<span class="ruby-identifier">add_minute</span> <span class="ruby-keyword">until</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">achieved_duplication</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{c.balls.to_s} balls cycle after #{(c.checks/2).to_s} days.&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment">#binding.pry</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-add_five_minute" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_five_minute</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add_five_minute-source">
+            <pre><span class="ruby-comment"># File lib/clock.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_five_minute</span>
+  <span class="ruby-ivar">@five_min</span>.<span class="ruby-identifier">push</span> <span class="ruby-ivar">@min</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-identifier">flush_track</span>(<span class="ruby-string">&quot;min&quot;</span>)
+  <span class="ruby-identifier">add_hour</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@five_min</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">12</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-add_hour" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_hour</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add_hour-source">
+            <pre><span class="ruby-comment"># File lib/clock.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_hour</span>
+  <span class="ruby-ivar">@hour</span>.<span class="ruby-identifier">push</span> <span class="ruby-ivar">@five_min</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-identifier">flush_track</span>(<span class="ruby-string">&quot;five_min&quot;</span>)
+  <span class="ruby-identifier">add_twelfth_hour</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@hour</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">12</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-add_minute" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_minute</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add_minute-source">
+            <pre><span class="ruby-comment"># File lib/clock.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_minute</span>
+  <span class="ruby-ivar">@min</span>.<span class="ruby-identifier">push</span> <span class="ruby-ivar">@main_tray</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-identifier">add_five_minute</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@min</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">5</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-add_twelfth_hour" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_twelfth_hour</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add_twelfth_hour-source">
+            <pre><span class="ruby-comment"># File lib/clock.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_twelfth_hour</span>
+  <span class="ruby-ivar">@twelfth_hour</span> = <span class="ruby-ivar">@hour</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-identifier">flush_track</span>(<span class="ruby-string">&quot;hour&quot;</span>)
+  <span class="ruby-ivar">@main_tray</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-ivar">@twelfth_hour</span>) <span class="ruby-comment">#prepends @twelfth_hour to @main_tray</span>
+  <span class="ruby-ivar">@twelfth_hour</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">check_for_duplication</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-check_for_duplication" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">check_for_duplication</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="check_for_duplication-source">
+            <pre><span class="ruby-comment"># File lib/clock.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_for_duplication</span>
+  <span class="ruby-ivar">@checks</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-ivar">@achieved_duplication</span> = <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@default_tray</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@main_tray</span>
+  <span class="ruby-comment">#</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-flush_track" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">flush_track</span><span
+            class="method-args">(var)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="flush_track-source">
+            <pre><span class="ruby-comment"># File lib/clock.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">flush_track</span>(<span class="ruby-identifier">var</span>)
+  <span class="ruby-identifier">track</span> = <span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{var}&quot;</span>)
+  <span class="ruby-ivar">@main_tray</span> = <span class="ruby-identifier">track</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@main_tray</span>
+  <span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{var}&quot;</span>, [])
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-json_output" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">json_output</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Output per requirement</p>
+          
+          
+
+          
+          <div class="method-source-code" id="json_output-source">
+            <pre><span class="ruby-comment"># File lib/clock.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">json_output</span>
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">to_json</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-output" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">output</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Keep the output DRY</p>
+          
+          
+
+          
+          <div class="method-source-code" id="output-source">
+            <pre><span class="ruby-comment"># File lib/clock.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">output</span>
+  {<span class="ruby-string">&quot;Min&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@min</span>,
+   <span class="ruby-string">&quot;FiveMin&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@five_min</span>,
+   <span class="ruby-string">&quot;Hour&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@hour</span>,
+   <span class="ruby-string">&quot;Main&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@main_tray</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-pretty_output" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">pretty_output</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Output to debug easier</p>
+          
+          
+
+          
+          <div class="method-source-code" id="pretty_output-source">
+            <pre><span class="ruby-comment"># File lib/clock.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pretty_output</span>
+  <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">pretty_generate</span>(<span class="ruby-identifier">output</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
